@@ -1,0 +1,19 @@
+.navbar, .dropdown-menu, .btn, .navbar-toggle, .thumbnail, .panel-group, .panel, .panel-heading, input
+{
+    border-radius: 0px !important;
+}
+
+a
+{
+    color:$primary-link;
+    &:hover
+    {
+        color:$primary-hover-link;
+        text-decoration:none;
+    }
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}

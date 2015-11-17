@@ -1,0 +1,33 @@
+.pre-header
+{
+    background: white;
+    min-height: 32px;
+    line-height: 32px;
+
+    .contact
+    {
+        font-size: small;
+        .fa
+        {
+            color: $grey-light;
+        }
+    }
+
+    .social-icon
+    {
+        display: inline-block;
+        width: 35px;
+        text-align: center;
+        font-size: 15px;
+        color: $grey-light;
+        font-weight: 300;
+        @include transition(all);
+        @include transition-duration(.35s);
+        &:hover
+        {
+            background:$primary-color;
+            color:#fff;
+        }
+    }
+}
+
