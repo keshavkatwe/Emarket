@@ -1,9 +1,0 @@
-.btn-primary
-{
-    background:lighten($primary-color, 10%);
-    border:lighten($primary-color, 10%);
-    &:hover
-    {
-        background:lighten($primary-color, 5%);
-    }
-}

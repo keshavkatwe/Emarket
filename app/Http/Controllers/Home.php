@@ -21,7 +21,7 @@ class Home extends Controller {
         } else {
             $user = Auth::user();
         }
-        return view('pages.home', array('user' => $user));
+        return view('pages.blank', array('user' => $user));
     }
 
     /**

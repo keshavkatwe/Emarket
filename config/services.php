@@ -3,42 +3,36 @@
 return [
 
     /*
-      |--------------------------------------------------------------------------
-      | Third Party Services
-      |--------------------------------------------------------------------------
-      |
-      | This file is for storing the credentials for third party services such
-      | as Stripe, Mailgun, Mandrill, and others. This file provides a sane
-      | default location for this type of information, allowing packages
-      | to have a conventional place to find your various credentials.
-      |
-     */
+    |--------------------------------------------------------------------------
+    | Third Party Services
+    |--------------------------------------------------------------------------
+    |
+    | This file is for storing the credentials for third party services such
+    | as Stripe, Mailgun, Mandrill, and others. This file provides a sane
+    | default location for this type of information, allowing packages
+    | to have a conventional place to find your various credentials.
+    |
+    */
 
     'mailgun' => [
-        'domain' => '',
-        'secret' => '',
+        'domain' => env('MAILGUN_DOMAIN'),
+        'secret' => env('MAILGUN_SECRET'),
     ],
+
     'mandrill' => [
-        'secret' => '',
+        'secret' => env('MANDRILL_SECRET'),
     ],
+
     'ses' => [
-        'key' => '',
-        'secret' => '',
+        'key'    => env('SES_KEY'),
+        'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
+
     'stripe' => [
-        'model' => App\User::class,
-        'key' => '',
-        'secret' => '',
+        'model'  => App\User::class,
+        'key'    => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
     ],
-    'google' => [
-        'client_id' => '865274412604-2ee5aqhpukr6ah70cukij0qr8ct6mm3c.apps.googleusercontent.com',
-        'client_secret' => 'VzbjIAMw-Ibb1H_XYeWcqNdD',
-        'redirect' => 'http://localhost/savjikitchen/public/auth/google/callback',
-    ],
-    'facebook' => [
-        'client_id' => '246263435539826',
-        'client_secret' => 'b2ce960a93441b36d98292d761c15996',
-        'redirect' => 'http://localhost/savjikitchen/public/auth/google/callback',
-    ],
+
 ];

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>IMHealthSolutions - Integrated Medicine</title>
+        <title>EMarket</title>
 
         <!-- Bootstrap -->
         <link href="{{ URL::asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -46,7 +46,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">IM<span class="highlight">HEALTH</span>SOLUTIONS</a>
+                        <a class="navbar-brand" href="#"><span class="highlight">E</span>MARKET</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

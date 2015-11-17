@@ -65,4 +65,3 @@ Route::group(['middleware' => ['auth']], function() {
         'as' => 'manage_product', 'uses' => 'Product@manageProduct'
     ]);
 });
-
