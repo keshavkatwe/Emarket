@@ -11,7 +11,7 @@ class tbl_product extends Model {
    
     public function image() {
         $url = url('img/' . $this->image);
-        if (file_exists($url) && $this->image != "") {
+        if ($this->image == "") {
             $url = url('img/default.png');
         }
         return $url;

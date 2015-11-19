@@ -20,6 +20,9 @@ Route::get('/', 'Index@Index');
 Route::get('category/{id}', 'Index@Index');
 
 
+//Route::controller('/', 'Index');
+Route::controller('/checkout', 'Checkout');
+Route::controller('/cart', 'ShoppingCart');
 
 Route::get('auth/google', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\AuthController@handleProviderCallback');
