@@ -63,8 +63,35 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/save_product', [
         'as' => 'save_product', 'uses' => 'Product@saveProduct'
     ]);
-    
+
     Route::get('/manage_product', [
         'as' => 'manage_product', 'uses' => 'Product@manageProduct'
+    ]);
+
+    Route::get('/delete_product/{id}', [
+        'as' => 'delete_product', 'uses' => 'Product@deleteProduct'
+    ]);
+
+    Route::get('/edit_product/{id}', [
+        'as' => 'edit_product', 'uses' => 'Product@editProduct'
+    ]);
+
+
+    Route::post('/update_product', [
+        'as' => 'update_product', 'uses' => 'Product@updateProduct'
+    ]);
+
+
+    Route::get('/manage_category', [
+        'as' => 'manage_category', 'uses' => 'Product@manageCategory'
+    ]);
+
+
+    Route::post('/save_category', [
+        'as' => 'save_category', 'uses' => 'Product@saveCategory'
+    ]);
+
+    Route::get('/delete_category/{id}', [
+        'as' => 'delete_category', 'uses' => 'Product@deleteCategory'
     ]);
 });

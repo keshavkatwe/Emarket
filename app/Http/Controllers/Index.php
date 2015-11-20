@@ -20,6 +20,8 @@ class Index extends Controller {
         $products = array();
         if ($category_id != null) {
             $products = tbl_product::where('category', $category_id)->get();
+        } else {
+            $products = tbl_product::all()->take(6);
         }
         $data = array(
             'products' => $products

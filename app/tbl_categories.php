@@ -10,8 +10,8 @@ class tbl_categories extends Model {
     protected $primaryKey = 'id';
     protected $fillable = ['category_id'];
 
-    public function recipes() {
-        return $this->belongsTo('App\tbl_product', 'category_id', 'id');
+    public function product() {
+        return $this->belongsTo('App\tbl_product', 'category', 'id');
     }
 
 }

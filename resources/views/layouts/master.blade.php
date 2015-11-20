@@ -25,7 +25,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="contact col-md-6 col-sm-6 col-xs-6">
-                            <i class="fa fa-phone"></i> +91-9000000000 | <a href="#"><i class="fa fa-envelope-o "></i> demo@example.com</a>
+                            <i class="fa fa-phone"></i> +91-9000000000 | <a href="#"><i class="fa fa-envelope-o "></i> info@emarket.com</a>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
                             <a class="social-icon"><i class="fa fa-facebook"></i></a>
@@ -46,13 +46,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><span class="highlight">E</span>MARKET</a>
+                        <a class="navbar-brand" href="{{url()}}"><span class="highlight">E</span>MARKET</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">About Us</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services</a>
@@ -63,12 +63,11 @@
                                     <li><a href="#">Weight loss solutions</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="#">News</a></li>
                             <li><a href="#">Contact us</a></li>
                             <li><a href="#" onclick="openCart()" style="font-size: 29px;padding-bottom: 0px;padding-top: 10px;"><i class="fa fa-shopping-cart"></i><span class="badge" style="position: absolute;
                                                                                                                                                                          top: 5px;
                                                                                                                                                                          right: 5px;
-                                                                                                                                                                         background-color: #03B0DF;">1</span></a></li>
+                                                                                                                                                                         background-color: #03B0DF;" id="cart_count"><?php echo $cart_count ?></span></a></li>
 
 
                         </ul>
@@ -79,8 +78,8 @@
         <section class="main-content">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fa fa-newspaper-o"></i> News</a></li>
+<!--                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fa fa-newspaper-o"></i> News</a></li>-->
                 </ol>
                 <div class="row">
                     <div class="col-md-3 col-sm-4">
@@ -95,50 +94,7 @@
                         </div>
 
 
-                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="fa fa-microphone"></i> Current Issues and Trends
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-primary">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="fa fa-flash"></i> Action Steps for the Week
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-primary">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="fa fa-coffee"></i> Food for Thought
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="tags">
                             <ul>
                                 <li><a href="#">Health testing</a></li>
@@ -176,7 +132,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <h3>About Us</h3>
                         <hr/>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat.</p>
@@ -184,13 +140,13 @@
                             <h3>Contact</h3>
                             <hr/>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-envelope-o"></i> <a href="#">info@demo.com</a></li>
+                                <li><i class="fa-li fa fa-envelope-o"></i> <a href="#">info@emarket.com</a></li>
                                 <li><i class="fa-li fa fa-phone"></i> +91-91234567865</li>
-                                <li><i class="fa-li fa fa-map-marker"></i> 69 Prestige Avenue, Bella Vista, <br/>Sydney, Australia</li>
+                                <li><i class="fa-li fa fa-map-marker"></i> BVB College, <br/>Hubli, Karnataka</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
+<!--                    <div class="col-md-4 col-sm-4">
                         <h3>Health Rebates</h3>
                         <hr/>
                         <div class="rebates">
@@ -201,8 +157,8 @@
                             <a href="#" class="bupa"></a>
                             <a href="#" class="ahm"></a>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
+                    </div>-->
+                    <div class="col-md-6 col-sm-6">
                         <div class="newsletter">
                             <h3>Newsletter</h3>
                             <hr/>
@@ -237,7 +193,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            2014 © IMSolutions. ALL Rights Reserved. <a>Privacy Policy</a> | <a>Terms of Service</a>
+                            2014 © EMarket. ALL Rights Reserved. <a>Privacy Policy</a> | <a>Terms of Service</a>
                         </div>
                         <div class="col-md-6 text-right">
                             Designed by <a>Dynasofts</a>
@@ -262,7 +218,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
-                        <button type="button" class="btn btn-primary">Checkout</button>
+                        <a href="{{url('checkout')}}" class="btn btn-primary">Checkout</a>
                     </div>
                 </div>
             </div>
@@ -291,64 +247,71 @@
         <script>
         </script>
         <script>
-                    function addtocart(product_id)
-                    {
-                    $.ajax({
+            function addtocart(product_id)
+            {
+                $('#addcartbtn_' + product_id).html('<i class="fa fa-spin fa-spinner"></i>Adding...');
+                $.ajax({
                     type: 'GET',
-                            url: "{{url('cart/add')}}",
-                            data: "product_id=" + product_id,
-                            success: function (data, textStatus, jqXHR) {
-                            alert(data);
-                            }
-                    });
+                    url: "{{url('cart/add')}}",
+                    data: "product_id=" + product_id,
+                    success: function (data, textStatus, jqXHR) {
+                        $('#addcartbtn_' + product_id).html('Added');
+                        $('#cart_count').html(data['cart_count']);
                     }
+                });
+            }
 
             function updateCart(product_id)
             {
-            $.ajax({
-            type: 'GET',
+                $.ajax({
+                    type: 'GET',
                     url: "{{url('cart/update')}}",
                     data: "product_id=" + product_id + "&quantity=" + $('#quantity_' + product_id).val(),
                     success: function (data, textStatus, jqXHR) {
-                    alert(data);
+
+                        $('#subtotal_' + product_id).html(data['subtotal'].toFixed(2));
+                        $('#total_cart').html(data['cart_total'].toFixed(2));
                     }
-            });
+                });
             }
 
             function removefromcart(product_id)
             {
-            $.ajax({
-            type: 'GET',
+                $('#removebtn_' + product_id).html('<i class="fa fa-spin fa-spinner"></i>');
+                $.ajax({
+                    type: 'GET',
                     url: "{{url('cart/remove')}}",
                     data: "product_id=" + product_id,
                     success: function (data, textStatus, jqXHR) {
-                    alert(data);
+                        $('#tr_' + product_id).remove();
+                        $('#cart_count').html(data['cart_count']);
+                        $('#total_cart').html(data['cart_total'].toFixed(2));
                     }
-            });
+                });
             }
 
             function openCart()
             {
-            $('#cartModal').modal('show');
-                    $.ajax({
+                $('#cartModal').modal('show');
+                $.ajax({
                     type: 'GET',
-                            url: "{{url('cart/show')}}",
-                            success: function (data, textStatus, jqXHR) {
-                            $('#cartBody').html(data);
-                            }
-                    });
+                    url: "{{url('cart/show')}}",
+                    success: function (data, textStatus, jqXHR) {
+                        $('#cartBody').html(data);
+                    }
+                });
             }
 
 
             $('.dropdown > .dropdown-toggle, .dropdown > .dropdown-menu').mouseenter(function () {
-            if ($(".dropdown").css("float") == "left") {
-            $(this).parent().toggleClass('open');
-            }
+                if ($(".dropdown").css("float") == "left") {
+                    $(this).parent().toggleClass('open');
+                }
             });
-                    $('.dropdown > .dropdown-toggle, .dropdown > .dropdown-menu').mouseleave(function () {
-            if ($(".dropdown").css("float") == "left") {
-            $(this).parent().removeClass('open');
-            }
+            $('.dropdown > .dropdown-toggle, .dropdown > .dropdown-menu').mouseleave(function () {
+                if ($(".dropdown").css("float") == "left") {
+                    $(this).parent().removeClass('open');
+                }
             });
 
         </script>

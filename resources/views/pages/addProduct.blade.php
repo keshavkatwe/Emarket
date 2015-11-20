@@ -70,6 +70,7 @@
                     </div>
                 </div>
             </div><!-- /.box-body -->
+            <input type="hidden"  value="{{ $pid }}" name="pid" id="pid" />
             <div class="box-footer">
                 <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-save"></i> Save changes</button>
             </div><!-- /.box-footer -->
