@@ -47,7 +47,10 @@
             <div class="thumbnail">
                 <img style="height: 200px" src="{{$product->image()}}" alt="...">
                 <div class="caption">
-                    <h4>{{$product->name}}</h4>
+                    <h4 style="text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;">{{$product->name}}</h4>
                     <p class="content">{{$product->about}}</p>
                     <h5>Price: Rs.{{$product->price}}</h5>
                     <p class="text-center">
