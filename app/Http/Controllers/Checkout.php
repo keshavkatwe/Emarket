@@ -41,6 +41,7 @@ class Checkout extends Controller {
         $order->fullname = $request->fullname;
         $order->email = $request->emailaddress;
         $order->address = $request->address;
+        $order->mobile = $request->mobile;
         $order->prescription = $prescription;
         $order->save();
 
@@ -61,10 +62,10 @@ class Checkout extends Controller {
             'emailaddress' => $request->emailaddress
         );
 
-//        Mail::send('emails.order', ['data' => $data], function ($m) use ($data) {
-//            $m->from('keshav.katwe@chromosis.com', 'EMarket');
-//            $m->to($data['emailaddress'], $data['fullname'])->subject('Order Placed Successfully');
-//        });
+        Mail::send('emails.order', ['data' => $data], function ($m) use ($data) {
+            $m->from('noreply@emarket.com', 'EMarket');
+            $m->to($data['emailaddress'], $data['fullname'])->subject('Order Placed Successfully');
+        });
 
         $cart->clear();
 

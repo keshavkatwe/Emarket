@@ -2,7 +2,7 @@
 
 @section('content')
 <?php if (count($shopping_cart)) { ?>
-<form method="post" id="checkoutform" enctype="multipart/form-data">
+    <form method="post" id="checkoutform" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -70,6 +70,11 @@
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
+                            <label>Mobile No</label>
+                            <input type="text" class="form-control" name="mobile"/>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
                             <label>Address</label>
                             <textarea class="form-control" name="address" placeholder="Address for items to be delivered"></textarea>
                             <span class="help-block"></span>
@@ -123,6 +128,9 @@
             },
             prescription: {
                 required: true
+            },
+            mobile: {
+                required: true
             }
         },
         messages: {
@@ -137,6 +145,9 @@
             },
             prescription: {
                 required: "Please choose prescription"
+            },
+            mobile: {
+                required: "Please enter mobile number"
             }
         }, submitHandler: function (form) {
             form.submit();

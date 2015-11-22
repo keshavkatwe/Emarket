@@ -128,6 +128,7 @@
                         <li><a href="{{ url("edit") }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
                         <li><a href="{{ url("add_product") }}"><i class="fa fa-plus"></i> <span>Add Product</span></a></li>
                         <li><a href="{{ url("manage_product") }}"><i class="fa fa-list-alt"></i> <span>Manage Product</span></a></li>
+                        <li><a href="{{ url("manage_category") }}"><i class="fa fa-list-alt"></i> <span>Manage Category</span></a></li>
                         <li><a href="{{ url("orders") }}"><i class="fa fa-list-alt"></i> <span>Orders</span></a></li>
                     </ul>
                 </section>
