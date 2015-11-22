@@ -2,7 +2,7 @@
 
 @section('content')
 <?php if (count($shopping_cart)) { ?>
-    <form method="post">
+<form method="post" id="checkoutform" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -62,14 +62,27 @@
                         <div class="form-group">
                             <label>Full name</label>
                             <input type="text" class="form-control" name="fullname"/>
+                            <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
                             <input type="text" class="form-control" name="emailaddress"/>
+                            <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label>Address</label>
-                            <textarea class="form-control" name="address"></textarea>
+                            <textarea class="form-control" name="address" placeholder="Address for items to be delivered"></textarea>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Prescription</label>
+                            <input type="file" name="prescription" class="form-control"/>
+                            <span class="help-block"></span>
+                        </div>
+                        <p><strong>Note:</strong> Prescription is verified and order is confirmed</p>
+                        <div class="form-group">
+                            <label>Payment Type</label>
+                            <p>Cash on delivery</p>
                         </div>
                     </div>
                 </div>
@@ -90,4 +103,44 @@
 <?php } else { ?>
     <h3 class="text-center">No items to checkout</h3>
 <?php } ?>
+@endsection
+
+
+@section('script')
+
+<script>
+    $('#checkoutform').validate({
+        rules: {
+            fullname: {
+                required: true
+            },
+            emailaddress: {
+                required: true,
+                email: true
+            },
+            address: {
+                required: true
+            },
+            prescription: {
+                required: true
+            }
+        },
+        messages: {
+            fullname: {
+                required: "Please enter fullname"
+            },
+            emailaddress: {
+                required: "Please enter email address"
+            },
+            address: {
+                required: "Please enter address",
+            },
+            prescription: {
+                required: "Please choose prescription"
+            }
+        }, submitHandler: function (form) {
+            form.submit();
+        }
+    });
+</script>
 @endsection

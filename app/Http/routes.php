@@ -17,12 +17,13 @@
 
 
 Route::get('/', 'Index@Index');
-Route::get('category/{id}', 'Index@Index');
+Route::get('category/{id}', 'Index@Category');
 
 
 //Route::controller('/', 'Index');
 Route::controller('/checkout', 'Checkout');
 Route::controller('/cart', 'ShoppingCart');
+Route::controller('/orders', 'Orders');
 
 Route::get('auth/google', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\AuthController@handleProviderCallback');

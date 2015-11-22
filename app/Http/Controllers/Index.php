@@ -16,17 +16,21 @@ use Anam\Phpcart\Cart;
  */
 class Index extends Controller {
 
-    public function Index($category_id = NULL) {
-        $products = array();
-        if ($category_id != null) {
-            $products = tbl_product::where('category', $category_id)->get();
-        } else {
-            $products = tbl_product::all()->take(6);
-        }
+    public function Index() {
+        $products = tbl_product::all()->take(6);
         $data = array(
             'products' => $products
         );
         return view('home/index', $data);
+    }
+
+    public function Category($category_id) {
+        $products = tbl_product::where('category', $category_id)->get();
+
+        $data = array(
+            'products' => $products
+        );
+        return view('home/category', $data);
     }
 
 }

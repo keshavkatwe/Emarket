@@ -45,7 +45,7 @@
 
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <img src="{{$product->image()}}" alt="...">
+                <img style="height: 200px" src="{{$product->image()}}" alt="...">
                 <div class="caption">
                     <h4>{{$product->name}}</h4>
                     <p class="content">{{$product->about}}</p>

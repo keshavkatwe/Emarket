@@ -94,7 +94,7 @@
                         </div>
 
 
-                        
+
                         <div class="tags">
                             <ul>
                                 <li><a href="#">Health testing</a></li>
@@ -146,18 +146,18 @@
                             </ul>
                         </div>
                     </div>
-<!--                    <div class="col-md-4 col-sm-4">
-                        <h3>Health Rebates</h3>
-                        <hr/>
-                        <div class="rebates">
-                            <a href="#" class="medibank"></a>
-                            <a href="#" class="nib"></a>
-                            <a href="#" class="hbf"></a>
-                            <a href="#" class="unity"></a>
-                            <a href="#" class="bupa"></a>
-                            <a href="#" class="ahm"></a>
-                        </div>
-                    </div>-->
+                    <!--                    <div class="col-md-4 col-sm-4">
+                                            <h3>Health Rebates</h3>
+                                            <hr/>
+                                            <div class="rebates">
+                                                <a href="#" class="medibank"></a>
+                                                <a href="#" class="nib"></a>
+                                                <a href="#" class="hbf"></a>
+                                                <a href="#" class="unity"></a>
+                                                <a href="#" class="bupa"></a>
+                                                <a href="#" class="ahm"></a>
+                                            </div>
+                                        </div>-->
                     <div class="col-md-6 col-sm-6">
                         <div class="newsletter">
                             <h3>Newsletter</h3>
@@ -231,6 +231,9 @@
         <!-- Bootstrap 3.3.5 -->
         <script type="text/javascript" src="{{ URL::asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
 
+        <script type="text/javascript" src="{{ URL::asset('plugins/jquery.validate/jquery.validate.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('plugins/jquery.validate/additional-methods.js') }}"></script>
+
 <!--        <script>
     $(document).scroll(function(e){
         var scrollTop = $(document).scrollTop();
@@ -247,6 +250,24 @@
         <script>
         </script>
         <script>
+
+            $.validator.setDefaults({
+//        onkeyup: false,
+//        errorClass: 'has-error',
+//        validClass: 'has-success',
+                ignore: "",
+                highlight: function (element, errorClass, validClass) {
+                    $(element).closest('.form-group').addClass('has-error');
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).closest('.form-group').removeClass('has-error');
+                    $(element).closest('.form-group').find('.help-block').text('');
+                },
+                errorPlacement: function (error, element) {
+                    $(element).closest('.form-group').find('.help-block').text(error.text());
+                },
+            });
+
             function addtocart(product_id)
             {
                 $('#addcartbtn_' + product_id).html('<i class="fa fa-spin fa-spinner"></i>Adding...');
@@ -316,5 +337,6 @@
 
         </script>
 
+        @yield('script')
     </body>
 </html>
